@@ -1,3 +1,53 @@
 body {
-	background-color: $white; 
+	background-color: $white;
+	overflow-x: hidden;
+	font-family: $f-mukta;
+}
+
+input[type=radio] {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.quiz {
+	&__group {
+		display: none;
+		flex-direction: column;
+
+		&--current {
+			display: flex;
+		}
+	}
+
+	&__title {
+		display: block;
+	}
+
+	&__radio {
+		position: relative;
+	}
+
+	input {
+		display: block;
+		// position:absolute;
+		// top:0;
+		// left:0;
+		// right:0;
+		// bottom:0;
+	}
+
+	label {
+		padding: 5px;
+		border: 1px solid #CCC;
+		cursor: pointer;
+		z-index: 90;
+
+		&:hover {
+			background: $black;
+		}
+	}
+
+	input[type="radio"]:checked + label {
+		background: yellow;
+	}
 }

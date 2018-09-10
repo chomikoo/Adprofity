@@ -17,64 +17,78 @@
 
     <main>
 
-        <section>
+        <section class="quiz container">
 
-            <form action="" id="quiz" class="quiz">
+            <form action="" id="quiz" class="quiz__container">
 
-                <div class="form-group">
+                <div class="quiz__group quiz__group--current ">
 
                     <p class="quiz__title">Jakiego koloru jest czerwony maluch ?</p>
 
                     <div class="quiz__radio">
-                        <label for="question-1a">Czerwony</label>
+                        <label class="quiz__label" for="question-1a">Czerwony</label>
                         <input id="question-1a" type="radio" name="question1" value="correct">
                     </div>
 
                     <div class="quiz__radio">
-                        <label for="question-1b">Niebieski</label>
+                        <label class="quiz__label" for="question-1b">Niebieski</label>
                         <input id="question-1b" type="radio" name="question1" value="wrong">
                     </div>
 
                 </div>
 
-                <div class="form-group">
+                <div class="quiz__group">
 
                     <p class="quiz__title">Kto napisał "Wesele" Wyspiańskiego ?</p>
 
                     <div class="quiz__radio">
-                        <label for="question-2a">Stefan Żeromski</label>
+                        <label class="quiz__label" for="question-2a">Stefan Żeromski</label>
                         <input id="question-2a" type="radio" name="question2" value="wrong">
                     </div>
 
                     <div class="quiz__radio">
-                        <label for="question-2b">Stanisław Wyspiański</label>
+                        <label class="quiz__label" for="question-2b">Stanisław Wyspiański</label>
                         <input id="question-2b" type="radio" name="question2" value="correct">
                     </div>
 
                 </div>
 
-                <div class="form-group">
+                <div class="quiz__group">
                     <p class="quiz__title">Wynik równania 2 + 2 = .. ?</p>
 
                     <div class="quiz__radio">
-                        <label for="question-3a">2</label>
+                        <label class="quiz__label" for="question-3a">2</label>
                         <input id="question-3a" type="radio" name="question3" value="correct">
                     </div>
                     <div class="quiz__radio">
-                        <label for="question-3b">3</label>
+                        <label class="quiz__label" for="question-3b">3</label>
                         <input id="question-3b" type="radio" name="question3" value="wrong">
                     </div>
                 </div>
 
             </form>
 
+            <div class="quiz__progress">
+                <span>1</span>/
+                <span>3</span>
+            </div>
+
         </section>
 
-        <section class="cv">
+        <section class="cv container">
 
         </section>
 
     </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+     WebFont.load({
+        google: {
+          families: ['Mukta:400,700', 'News+Cycle:400,700', 'Nunito+Sans:400,700']
+        }
+      });
+    </script>
 
     <script src="js/script.min.js"></script>
 
