@@ -9,7 +9,11 @@
     <meta name="description" content="Zadanie rekrutacyjne Adprofity">
     <meta name="author" content="SzymonTrzepla">
 
-    <link type="text/css" rel="stylesheet" href="css/style.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/style.min.css?ver=1">
 
 </head>
 
@@ -21,73 +25,318 @@
 
             <form action="" id="quiz" class="quiz__container">
 
-                <div class="quiz__group quiz__group--current ">
+                <div class="quiz__question quiz__question--current">
 
-                    <p class="quiz__title">Jakiego koloru jest czerwony maluch ?</p>
+                    <p class="quiz__title">Jakiego koloru jest czerwony maluch&nbsp;?</p>
 
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-1a">Czerwony</label>
                         <input id="question-1a" type="radio" name="question1" value="correct">
+                        <label class="quiz__label" for="question-1a">Czerwony</label>
                     </div>
 
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-1b">Niebieski</label>
                         <input id="question-1b" type="radio" name="question1" value="wrong">
+                        <label class="quiz__label" for="question-1b">Niebieski</label>
                     </div>
 
                 </div>
 
-                <div class="quiz__group">
+                <div class="quiz__question">
 
-                    <p class="quiz__title">Kto napisał "Wesele" Wyspiańskiego ?</p>
+                    <p class="quiz__title">Kto napisał "Wesele" Wyspiańskiego&nbsp;?</p>
 
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-2a">Stefan Żeromski</label>
                         <input id="question-2a" type="radio" name="question2" value="wrong">
+                        <label class="quiz__label" for="question-2a">Stefan Żeromski</label>
                     </div>
 
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-2b">Stanisław Wyspiański</label>
                         <input id="question-2b" type="radio" name="question2" value="correct">
+                        <label class="quiz__label" for="question-2b">Stanisław Wyspiański</label>
                     </div>
 
                 </div>
 
-                <div class="quiz__group">
-                    <p class="quiz__title">Wynik równania 2 + 2 = .. ?</p>
+                <div class="quiz__question">
+                    <p class="quiz__title">Wynik równania 2 + 2 = ..&nbsp;?</p>
 
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-3a">2</label>
                         <input id="question-3a" type="radio" name="question3" value="correct">
+                        <label class="quiz__label" for="question-3a">2</label>
                     </div>
                     <div class="quiz__radio">
-                        <label class="quiz__label" for="question-3b">3</label>
                         <input id="question-3b" type="radio" name="question3" value="wrong">
+                        <label class="quiz__label" for="question-3b">3</label>
                     </div>
+                </div>
+
+                <div class="quiz__counter">
+                    Pytanie:<span id="quizCurrent">1</span>/<span id="quizTotal">3</span>
                 </div>
 
             </form>
 
-            <div class="quiz__progress">
-                <span>1</span>/
-                <span>3</span>
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="cv" class="cv">
+            <div class="cv__container container">
+                <div class="row">
+                    <div class="cv__col1 cv__col--yellow">
+                        <div class="cv__img"></div>
+                        <h1 class="cv__heading">John Smith</h1>
+
+                        <h2 class="cv__subheading">Web Developer</h2>
+
+                        <div class="cv__contact contact">
+                            <h3 class="cv__title">Contact</h3>
+                            <ul class="contact__list">
+                                <li class="contact__element contact__email"><span class="contact__icon far fa-envelope"></span><a
+                                        href="mailto:johnsmith@company.com?subject=Mail z CV"></a>johnsmith@company.com</li>
+                                <li class="contact__element contact__tel"><span class="contact__icon fas fa-phone"></span>+62
+                                    0819090168930</li>
+                                <li class="contact__element contact__adress"><span class="contact__icon fas fa-home"></span>Merkid,
+                                    Yogyakarta</li>
+                                <li class="contact__element contact__page"><span class="contact__icon fas fa-globe"></span><a
+                                        href="www.johnmrongos.com" class="contact__link">www.johnmrongos.com</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="cv__hobbies hobbies">
+                            <h3 class="cv__title">Hobbies</h3>
+                            <ul class="hobbies__list">
+                                <li class="hobbies__element"><span class="hobbies__icon fas fa-plane"></span>Travel</li>
+                                <li class="hobbies__element"><span class="hobbies__icon fas fa-book-open"></span>Reading</li>
+                                <li class="hobbies__element"><span class="hobbies__icon fas fa-music"></span>Music</li>
+                                <li class="hobbies__element"><span class="hobbies__icon fas fa-pen"></span>Writing</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="socials">
+                            <ul class="socials__list">
+                                <li class="socials__elem"><a href="www.twitter.com">Twitter : @Johndoe</a></li>
+                                <li class="socials__elem"><a href="www.facebook.com">Facebook : John Doe</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- .col1 -->
+
+                    <div class="cv__col2 info">
+                        <article id="profile" class="cv__profile cv__article">
+                            <header class="cv__header">
+                                <span class="cv__icon fas fa-user"></span>
+                                <h2 class="cv__head">Profile</h2>
+                            </header>
+                            <p class="cv__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris varius
+                                et magna et feugiat. Curabitur in placerat tellus. Quisque faucibus magna vel nisl
+                                imperdiet, at vulputate libero venenatis. Nullam elementum ut velit vitae rutrum. Cras
+                                ac sapien lacinia, tristique leo a, cursus augue. </p>
+
+                            <p class="cv__text">Duis imperdiet convallis nibh, eu varius metus efficitur at. Nam
+                                facilisis vel enim a semper. Fusce nibh turpis, varius in nunc at, tempus malesuada
+                                lectus. Vivamus accumsan lacus justo. </p>
+
+                        </article>
+                        <!-- .cv__profile -->
+                        <article id="education" class="cv__education cv__article">
+                            <header class="cv__header">
+                                <span class="cv__icon fas fa-graduation-cap"></span>
+                                <h2 class="cv__head">Education</h2>
+                            </header>
+
+                            <ul class="profile__list">
+                                <li class="profile__elem">
+                                    <h4 class="profile__title">University of YK</h4>
+                                    <h5 class="profile__subtitle">Bechelor in Technology Information</h5>
+                                    <span class="profile__date">2011 - 2014</span>
+                                    <p class="profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Mauris varius et magna et feugiat. Curabitur in placerat tellus.</p>
+                                </li>
+
+                                <li class="profile__elem">
+                                    <h4 class="profile__title">University of GK</h4>
+                                    <h5 class="profile__subtitle">Master in Technology Information</h5>
+                                    <span class="profile__date">2014 - 2016</span>
+                                    <p class="profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Mauris varius et magna et feugiat. Curabitur in placerat tellus.</p>
+                                </li>
+                            </ul>
+                        </article>
+                        <!-- .cv__education -->
+                        <article id="experience" class="cv_exp cv__article">
+                            <header class="cv__header">
+                                <span class="cv__icon fas fa-tv"></span>
+                                <h2 class="cv__head">Experience</h2>
+                            </header>
+
+                            <ul class="profile__list">
+                                <li class="profile__elem">
+                                    <h4 class="profile__title">Dugab YK.CO</h4>
+                                    <h5 class="profile__subtitle">Junior Web Developer</h5>
+                                    <span class="profile__date">2016</span>
+                                    <p class="profile__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Mauris varius et magna et feugiat. Curabitur in placerat tellus.</p>
+                                </li>
+
+                            </ul>
+                        </article>
+                        <!-- .cv_exp -->
+                        <article id="skilss" class="cv_skilss cv__article">
+                            <header class="cv__header">
+                                <span class="cv__icon fas fa-cogs"></span>
+                                <h2 class="cv__head">Skilss</h2>
+                            </header>
+                            <ul class="skilss__list">
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef" stroke-width="4" fill="none"
+                                                cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="25,100" fill="none" 
+                                                cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">25%</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    Java
+                                </li>
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef" stroke-width="4" fill="none"
+                                            cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="55,100" fill="none" 
+                                                cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">55%</text>
+                                            </g>
+                                        </svg>
+                                    </div>PHP
+                                </li>
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef" stroke-width="4" fill="none"
+                                            cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="50,100" fill="none" cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">50%</text>
+                                            </g>
+                                        </svg>
+                                    </div>C#
+                                </li>
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef" stroke-width="4" fill="none"
+                                            cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="70,100" fill="none" cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">70%</text>
+                                            </g>
+                                        </svg>
+                                    </div>HTML5
+                                </li>
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef" stroke-width="4" fill="none"
+                                            cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="85,100" fill="none" cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">85%</text>
+                                            </g>
+                                        </svg>
+                                    </div>CSS
+                                </li>
+                                <li class="skilss__elem">
+                                    <div class="skilss__chart">
+                                        <svg class="chart" viewbox="0 0 33.83098862 33.83098862" width="100%" height="100%"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle class="chart__background" stroke="#efefef"  stroke-width="4" fill="none"
+                                            cx="16" cy="16" r="14" />
+                                            <circle class="chart__circle" stroke="#FFC935" stroke-width="4"
+                                                stroke-dasharray="90,100" fill="none" cx="18" 
+                                                cy="16"
+                                                r="14" />
+                                            <g class="chart__info">
+                                                <text class="chart__percent" x="16.91549431" y="15.5"
+                                                    alignment-baseline="central" text-anchor="middle" font-size="10">90%</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    Swift
+                                </li>
+                            </ul>
+                        </article>
+                        <!-- .cv_skilss -->
+
+
+                    </div>
+                    <!-- .col2 -->
+                </div>
+                <!-- .row -->
             </div>
-
         </section>
 
-        <section class="cv container">
-
-        </section>
+        <!-- error -->
+        <div id="error" class="error container">
+            <div class="error__content">
+                Brak dostępu do tej sekcji.
+            </div>
+            <button id="btn-reload" class="error__btn">Spróbuj ponownie
+                <span class="fas fa-sync-alt error__icon" aria-hidden="true"></span>
+            </button>
+        </div>
 
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
     <script>
-     WebFont.load({
-        google: {
-          families: ['Mukta:400,700', 'News+Cycle:400,700', 'Nunito+Sans:400,700']
-        }
-      });
+        WebFont.load({
+            google: {
+                families: ['Mukta:400,700', 'News+Cycle:400,700', 'Nunito+Sans:400,700']
+            }
+        });
     </script>
 
     <script src="js/script.min.js"></script>

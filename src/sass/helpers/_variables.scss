@@ -2,7 +2,7 @@
 
 // Max - widths Container
 
-$sm: 320px;
+$sm: 540px;
 $md: 750px;
 $xl: 1100px;
 
@@ -10,9 +10,11 @@ $xl: 1100px;
 
 $white: #ffffff;
 $black: #000000;
+$c-grey-light: #B8B9BB;
 $c-black-light: #1A1A1A;
 $c-grey-dark: #383838;
 $c-purple: #800080;
+$c-purple-hover: #af0baf;
 
 $c-orange: #FFC935;
 
@@ -20,8 +22,12 @@ $c-orange: #FFC935;
 
 $f-mukta: 'Mukta', sans-serif;
 $f-nunito: 'Nunito Sans', sans-serif;
-$f-news: 'News Cycle', sans-serif;
+$f-news: 'News Cycle', sans-serif; 
 
-// Spacers
+// BTN
+
+$height-btn: 50px;
+
+
 
 

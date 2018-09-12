@@ -1,7 +1,24 @@
 body {
+	position: relative;
 	background-color: $white;
-	overflow-x: hidden;
+	overflow: hidden;
 	font-family: $f-mukta;
+	height: 100vh;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: $black;
+	// &:hover {
+
+	// }
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 input[type=radio] {
@@ -10,17 +27,44 @@ input[type=radio] {
 }
 
 .quiz {
-	&__group {
+	// display: none;
+	height: 100vh;
+	background-color: $white;
+
+	&--hide {
+		// animation: fadeOut 0.2s ease-in-out;
 		display: none;
+	}
+	&__container {
+		position: relative;
+		height: 100%;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+	&__question {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-500%, -50%);
+		width: 100%;
+		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		align-content: center;
+		text-align: center;
+		transition: all 0.3s ease-in-out;
 
 		&--current {
-			display: flex;
+			opacity: 1;
+			transform: translate(-50%, -50%);
 		}
 	}
 
 	&__title {
 		display: block;
+		font-weight: bold;
+		font-size: 24px;
+		margin-bottom: 15px;
 	}
 
 	&__radio {
@@ -29,25 +73,42 @@ input[type=radio] {
 
 	input {
 		display: block;
-		// position:absolute;
-		// top:0;
-		// left:0;
-		// right:0;
-		// bottom:0;
+	}
+
+	input[type=radio]:checked ~ label {
+		background: $black;
+		color: $white;
 	}
 
 	label {
+		display: inline-block;
 		padding: 5px;
 		border: 1px solid #CCC;
 		cursor: pointer;
-		z-index: 90;
-
+		background-color: $c-purple;
+		color: $white;
+		width: 100%;
+		min-height: $height-btn;
+		padding: 15px;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 20px;
+		border: 1px solid $c-purple;
+		border-radius: #{($height-btn/2) * 0.9};
+		transition: all 0.3s ease-in-out;
 		&:hover {
-			background: $black;
+			background-color: $c-purple-hover;
+		}
+
+		&:focus {
+			outline: none;
 		}
 	}
 
-	input[type="radio"]:checked + label {
-		background: yellow;
+	&__counter {
+		position: absolute;
+		bottom: 0;
+		right: 20px;
 	}
+
 }

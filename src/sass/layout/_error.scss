@@ -1,0 +1,52 @@
+/////////////////////////
+//      ERROR
+/////////////////////////
+
+.error {
+	$e : &;
+	position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-500%, -50%);
+	// width: 70%;
+	transition: all 0.3s ease-in-out;
+	padding: 25px;
+    text-align: center;
+    font-size: 30px;
+	
+	box-shadow: 15px 15px 27px -12px $c-grey-dark;
+	border: 1px solid $c-grey-dark; 
+	border-radius: 25px;
+	&--show {
+		transform: translate(-50%, 0%);	
+	}
+
+	&__content {
+		margin-bottom: 25px;
+	}
+
+	&__btn {
+		border: 2px solid $c-purple;
+		padding: 5px 25px;
+		background-color: $c-purple;
+		color: $white;
+		transition: all 0.2s ease-in-out;
+		border-radius: 25px;
+		cursor: pointer;
+		&:hover {
+			background-color: $c-purple-hover;
+			
+			#{$e}__icon {
+				animation: spinAround 2s linear infinite;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__icon {
+		margin-left: 10px;
+	}
+}

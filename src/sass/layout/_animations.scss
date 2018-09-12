@@ -1,4 +1,55 @@
 //////////////
 // ANIMATIONS
 /////////////
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
 
+    100% {
+        opacity: 0;
+    }
+}
+
+// @keyframes entrance {
+//     0% {
+//         opacity: 0;
+//         transform: translate(-500%, 0);
+//     }
+ 
+//     100% {
+//         opacity: 1;
+//         transform: translate(-50%, -50%);
+//     }
+// }
+
+@keyframes spinAround {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes slideIn {
+    from {
+		transform: translateX(-500%)
+	}
+	to {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes chart-fill {
+    to {
+        stroke-dasharray: 0 100;
+    }
+}
+
+@keyframes chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
