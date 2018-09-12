@@ -33,6 +33,7 @@
 	}
 
 	&__col1, &__col2 {
+		position: relative;
 		width: 100%;
 		flex: 0 0 100%;
 	} 
@@ -184,13 +185,22 @@
 		font-weight: lighter;
 		font-size: 40px;
 		line-height: 42px;
+		@include breakpoint(sm) {
+			font-size: 40px;
+			line-height: 42px;
+		}
 	}
 
 	&__icon {
-		width: 50px;
-		font-size: 50px;
-		margin: 0 40px 0 0;
+		width: 30px;
+		font-size: 40px; 
+		margin: 0 30px 0 0;
 		color: $c-orange;
+		@include breakpoint(sm) {  
+			width: 50px;
+			font-size: 50px;
+			margin: 0 40px 0 0;
+		}
 	}
 
 	&__text {
@@ -230,7 +240,7 @@
 }
 
 .hobbies {
-	margin: 0 0 30px 0; 
+	margin: 0 0 60px 0; 
 	
 	&__list {
 		display: flex;
@@ -263,7 +273,10 @@
 
 
 .socials {
-	&__list {
+	position: absolute;
+	bottom: 0; 
+	width: 100%;
+	&__list { 
 		display: flex;
 		justify-content: space-between;
 		margin: 0 0 10px 0; 
