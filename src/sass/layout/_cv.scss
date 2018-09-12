@@ -22,8 +22,6 @@
 
 	&--show {
 		transform: translate(0%, 0);
-
-		// display: block;
 	}
 
 	&__container { 
@@ -79,8 +77,15 @@
 		background-repeat: no-repeat;
 
 		border-radius: 50%;
-		border: 2px solid $white;
+		box-shadow: 0 0 0 2px $white;
+		
+		transform: scale(1);
+		opacity: 1;
+		transition: all 0.2s ease-in-out;
 
+		&:hover {
+			animation: flash 0.2s ease-in-out;
+		}
 
 		&:before {
 			content: '';
@@ -95,6 +100,7 @@
 			height: calc(100% + 30px);
 
 		}
+
 
 		@include breakpoint(md) {
 			margin: 100px auto 25px auto;
@@ -111,6 +117,7 @@
 		color: $c-grey-dark;
 		text-transform: uppercase;
 		text-align: center;
+
 	}
 
 	&__subheading {
@@ -124,6 +131,10 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		text-align: center;
+		transition: all 0.2s ease-in-out;
+		&:hover {
+			letter-spacing: 4px;
+		}
 
 		@include breakpoint(xl) {
 			font-size: 35px;
@@ -148,6 +159,9 @@
 
 	&__article {
 		margin: 0 0 35px 0;
+		@include breakpoint(md) {
+			margin: 0 0 65px 0;
+		}
 
 		&:last-of-type { 
 			margin: 0;		
@@ -184,11 +198,10 @@
 		line-height: 21px;
 		margin-bottom: 10px;
 	}
-
-
-}
+} // .cv
 
 .contact {
+	$c: &;
 	&__element {
 		display: flex;
 		align-items: center;
@@ -196,6 +209,10 @@
 		font-size: 18px;
 		&:last-of-type {
 			margin: 0;
+		}
+
+		&:hover #{$c}__icon {
+			width: 20%;
 		}
 	}
 
@@ -208,9 +225,7 @@
 		text-align: right;
 		background: $c-grey-dark;
 		color: $c-orange;
-		&:hover:before {
-			animation: slideIn  0.2s ease-in-out;
-		}
+		transition: width 0.2s ease-in-out;
 	}
 }
 
@@ -266,7 +281,6 @@
 
 	&__elem {
 		position: relative;
-		// max-width: 400px;
 		margin: 0 0 20px 0;
 		&:last-of-type {
 			margin: 0;
@@ -295,10 +309,6 @@
 		font-size: 17px;
 	}
 
-	// &__date {
-
-	// }
-
 	&__text {
 		line-height: 20px;
 	}
@@ -317,7 +327,6 @@
 		flex: 0 0 50%;
 		margin-bottom: 10px;
 		text-align: center;
-		// display: flex;
 		&:nth-of-type(odd) {
 			padding-right: 10px; 
 		}
@@ -327,10 +336,6 @@
 		}
 	}
 	
-	// &__chart {
-	// 	// width: 50%;
-	// }
-
 	@include breakpoint(md) {
 		&__elem {
 			display: flex;
@@ -363,10 +368,6 @@
 }
 
 .chart{
-
-	&__precent {
-
-	}
 
 	&__circle {
 		animation: chart-fill 2s reverse; 

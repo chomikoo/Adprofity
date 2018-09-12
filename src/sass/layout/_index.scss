@@ -7,12 +7,25 @@ body {
 }
 
 a {
+	position: relative;
 	display: inline-block;
 	text-decoration: none;
 	color: $black;
-	// &:hover {
-
-	// }
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		height: 2px;
+		width: 0%;
+		background-color: $c-grey-dark; 
+		transition: width 0.3s ease-in-out;
+	}
+ 
+	&:hover:after {
+		width: 100%;
+	}
 }
 
 ul {
@@ -109,6 +122,8 @@ input[type=radio] {
 		position: absolute;
 		bottom: 0;
 		right: 20px;
+		font-family: $f-mukta;   
 	}
 
-}
+} 
+ 

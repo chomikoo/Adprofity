@@ -29,6 +29,7 @@
 	function showCv() {
 		quiz.parentElement.classList.add('quiz--hide');
 		cv.classList.add('cv--show');
+		cv.querySelectorAll('.cv__article').forEach( elem => elem.classList.add('animation--fadeIn'));
 	}
 
 	function showError() {
