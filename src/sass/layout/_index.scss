@@ -50,9 +50,13 @@ input[type=radio] {
 	}
 	&__container {
 		position: relative;
-		height: 100%;
 		max-width: 450px;
+		min-height: 185px;
+		top: 50%;
+		transform: translateY(-50%);
 		margin: 0 auto;
+		// height: 45%;
+		// margin: 50% auto;
 	}
 	&__question {
 		position: absolute;
@@ -120,7 +124,7 @@ input[type=radio] {
 
 	&__counter {
 		position: absolute;
-		bottom: 0;
+		bottom: -30px;
 		right: 20px;
 		font-family: $f-mukta;   
 	}

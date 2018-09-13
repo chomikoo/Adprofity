@@ -36,6 +36,7 @@
 		document.getElementById('btn-reload').addEventListener('click', () => {
 			window.location.href = window.location.href;
 		});
+		quiz.style.display = 'none';
 	}
 
 	function checkingCorrectAnswers(val) {
